@@ -1,0 +1,18 @@
+// Sass mixins
+//px to em
+@function em($pixels, $context: $browser-context) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+  @return $pixels / $context * 1em;
+}
+
+//sprite mixin
+@mixin sprite($left, $top) {
+  background-image: url(../images/sprite.png);
+  background-repeat: no-repeat;
+  background-position: $left $top;
+}
