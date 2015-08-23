@@ -55,8 +55,9 @@
   direction: 'horizontal',
   fade: true,
   keyboard: true,
+  touch: true,
   overflow: true,
-  pause: false,
+  pause: true,
   timing: { 'linear': '0.5s ease-in' },
   touch: true,
   transition: 'linear'

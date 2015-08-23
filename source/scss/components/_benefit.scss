@@ -1,0 +1,89 @@
+.benefit {
+  float: left;
+  width: percentage(416/1030);
+  margin-bottom: 17px;
+  @include scut-clearfix;
+  &:nth-child(even) {
+    float: right;
+  }
+}
+.benefit:hover {
+  & .benefit__title {
+    color: $basic-yellow;
+  }
+  & .benefit__img {
+    background-color: $basic-yellow
+  }
+  & .benefit__icon {
+    animation: shake 150ms 3 linear;
+  }
+}
+.benefit__img {
+  float: left;
+  width: 100px;
+  height: 100px;
+  box-sizing: border-box;
+  border: 1px solid black;
+  position: relative;
+  text-align: center;
+  transition: background-color 0.2s;
+}
+.benefit__icon {
+    position: absolute;
+    color: black;
+    &.icon-bulb {
+      font-size: 38px;
+      left: 36px;
+      top: 31px;
+    }
+    &.icon-tool {
+      font-size: 38px;
+      left: 31px;
+      top: 31px;
+    }
+    &.icon-aid {
+      font-size: 43px;
+      left: 27px;
+      top: 31px;
+    }
+    &.icon-doc {
+      font-size: 38px;
+      left: 32px;
+      top: 31px;
+    }
+  }
+  //анимация для иконок [benefit__icon.icon-...]
+  @keyframes shake {
+      0% {
+        transform: translate(3px, 0);
+      }
+      50% {
+        transform: translate(-3px, 0);
+      }
+      100% {
+        transform: translate(0, 0);
+      }
+    }
+
+.benefit__text {
+  float:right;
+  width: percentage(295/416);
+  position: relative;
+  top:-3px;
+}
+.benefit__title {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: $color-benefit-title-dark;
+  transition: color 0.2s;
+}
+.benefit__desc {
+  color:$color-benefit-desc-dark;
+  font-size: 14px;
+  line-height: percentage(26/14);
+  font-weight: 300;
+  margin-top: 10px;
+}

@@ -34,13 +34,35 @@ body {
 //center wrappers
 .wrapper-wide {
   max-width: 1170px;
-  margin-left: 99px;
+  margin: 0 auto;
 }
 
 .wrapper-narrow {
   max-width: 1030px;
+  margin: 0 auto;
 }
 
 a {
   text-decoration: none;
+}
+
+%basic-title-style {
+  font-weight: 300;
+  letter-spacing: 0.275em; 
+  text-transform: uppercase;
+  color: $color-basic-title;
+  font-size: 26px;
+  line-height: 1;
+  word-spacing: 0.45em;
+  & span {
+    margin-left: 0.4em;
+  }
+}
+%basic-subhead-style {
+  font-weight: 300;
+  letter-spacing: 0.06em; //tracking 60
+  line-height: 1;
+  color: $color-basic-text;
+  font-size: 17px;
+  line-height: percentage(26/17);
 }

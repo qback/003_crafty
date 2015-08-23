@@ -12,6 +12,10 @@
   height: 50px;
   outline: none;
   background: $basic-yellow;
+  transition: all 0.2s;
+  &:hover {
+    background: darken($basic-yellow, 15%);
+  }
 }
 
 //стилизация кнопки-бургера

@@ -5,11 +5,11 @@
 .main-header {
   height: 651px;
   border-top: 41px solid $basic-yellow;
-  background: rgba($basic-yellow, 0.2) url("../images/crafty-bg.jpg");
-  background-blend-mode: hard-light;
+  background: rgba($basic-yellow, .2) url('../images/crafty-bg.jpg');
   background-repeat: none;
-  background-size: cover;
   background-position: 50% 50%;
+  background-size: cover;
+  background-blend-mode: hard-light;
 }
 
 .main-header__logo {
@@ -29,11 +29,6 @@
 }
 
 @import '_main-nav';
-
-.main-header__banner {
-
-}
-
 @import '_banner';
 
 /*=====  End of Main-Header Styles  ======*/
