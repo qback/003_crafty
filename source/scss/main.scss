@@ -1,15 +1,16 @@
 // helpers
 @import 'helpers/_scut';
-@import 'helpers/_variables';
 @import 'helpers/_mixins';
 
 
 // base
 @import 'base/_normalize';
+@import 'base/_variables';
 @import 'base/_webfonts';
+@import 'base/_icons';
 @import 'base/_base';
 
 //components
-
+@import 'components/_header.scss';
 
 

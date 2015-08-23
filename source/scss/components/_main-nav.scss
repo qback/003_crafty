@@ -1,0 +1,144 @@
+/*----------  Main-Nav styles  ----------*/
+
+.main-nav {
+  overflow: hidden;
+  margin-top: 60px;
+  @include scut-clearfix;
+}
+
+.main-nav__button {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  outline: none;
+  background: $basic-yellow;
+}
+
+//стилизация кнопки-бургера
+.main-nav__button:before, .main-nav__button:after {
+  display: block;
+  overflow: hidden;
+  content: '.';
+  white-space: nowrap;
+  text-indent: 200%;
+}
+
+//три горизонтальных полосы
+.main-nav__button:before, .main-nav__button:after, .main-nav__button .main-nav__control {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  width: 23px;
+  height: 4px;
+  margin-top: -2px;
+  transition: cubic-bezier(.77, 0, .175, 1) .2s;
+  background: #000;
+}
+
+.main-nav__button:before {
+  transform: translateY(-7px);
+}
+
+.main-nav__button:after {
+  transform: translateY(7px);
+}
+
+.main-nav__button--active:before {
+  height: 3px;
+  transform: rotate(45deg);
+}
+
+.main-nav__button--active:after, .main-nav__button--active .main-nav__control, .main-nav__button--active:after {
+  height: 3px;
+  transform: rotate(-45deg);
+}
+
+//центральная полоска скрывается
+.main-nav__button--active .main-nav__control {
+  opacity: 0;
+}
+
+//стилизация навигационного меню
+.main-nav__list {
+  position: relative;
+  left: 0;
+  float: left;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  transition: cubic-bezier(.77, 0, .175, 1) .2s;
+  background: rgba($bg-navigation, .85);
+}
+
+.main-nav__list--hidden {
+  left: 9000px;
+}
+
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-nav__item {
+  float: left;
+  min-height: 50px;
+  margin-left: 14px;
+  text-align: left;
+  &:first-child {
+    margin-left: 46px;
+  }
+  &:nth-child(2) {
+    margin-left: 29px;
+  }
+  &:nth-child(3) {
+    margin-left: 31px;
+  }
+  &:nth-child(4) {
+    margin-left: 30px;
+  }
+  &:nth-child(5) {
+    margin-left: 32px;
+  }
+  &:nth-child(6) {
+    margin-left: 32px;
+  }
+  &:last-child {
+    margin-right: 46px;
+    margin-left: 24px;
+  }
+}
+
+.main-nav__item:before {
+  display: inline-block;
+  height: 100%;
+  min-height: inherit;
+  content: '';
+  vertical-align: middle;
+}
+
+.main-nav__item--active {
+  & .main-nav__link {
+    cursor: default;
+    color: white;
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+.main-nav__link {
+  font-size: 12px;
+  line-height: 1;
+  position: relative;
+  top: 2px;
+  display: inline-block;
+  transition: all .3s;
+  vertical-align: middle;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: $color-navigation;
+  &:hover {
+    color: white;
+  }
+}

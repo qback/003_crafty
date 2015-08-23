@@ -1,0 +1,39 @@
+/*==========================================
+=            Main-Header Styles            =
+==========================================*/
+
+.main-header {
+  height: 651px;
+  border-top: 41px solid $basic-yellow;
+  background: rgba($basic-yellow, 0.2) url("../images/crafty-bg.jpg");
+  background-blend-mode: hard-light;
+  background-repeat: none;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.main-header__logo {
+  font-family: $font-family-logo;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1;
+  display: inline-block;
+  margin-top: 60px;
+  letter-spacing: 2px;
+  color: $basic-yellow;
+}
+
+.main-header__nav {
+  float: right;
+  margin-right: 0;
+}
+
+@import '_main-nav';
+
+.main-header__banner {
+
+}
+
+@import '_banner';
+
+/*=====  End of Main-Header Styles  ======*/

@@ -26,6 +26,16 @@ module.exports = function(grunt) {
         }]
       }
     }, //scss обработчик
+    autoprefixer: {
+      dist: {
+        options: {
+          browsers: ['> 1%', 'last 4 versions', 'ie >= 9', 'Opera 12.1'],
+        },
+        files: {
+          'build/css/main.css': 'source/css/main.css'
+        }
+      }
+    },
     imagemin: {
       dist: {
         options: {
@@ -59,7 +69,7 @@ module.exports = function(grunt) {
       },
       scss: {
         files: ['source/scss/**/*.scss'],
-        tasks: ['sass', 'sync']
+        tasks: ['sass', 'px_to_rem', 'autoprefixer', 'sync']
       },
       copyJs: {
         files: ['source/js/*.js'],
@@ -80,24 +90,38 @@ module.exports = function(grunt) {
       }
     }, //изменение файлов
     webfont: {
-            icons: {
-                src: 'assets/icons/*.svg',
-                dest: 'source/fonts/',
-                destCss: 'source/scss/base/',
-                options: {
-                  stylesheet: 'scss',
-                    font: 'icons',
-                    fontHeight: 96,
-                    normalize: false,
-                    ascent: 84,
-                    descent: 12,
-                    destHtml: 'assets/',
-                    templateOptions: {
-                        classPrefix: 'icon-'
-                    }
-                }
-            }
+      icons: {
+        src: 'assets/icons/*.svg',
+        dest: 'source/fonts/',
+        destCss: 'source/scss/base/',
+        options: {
+          stylesheet: 'scss',
+          font: 'icons',
+          fontHeight: 96,
+          normalize: false,
+          ascent: 84,
+          descent: 12,
+          destHtml: 'assets/',
+          templateOptions: {
+            classPrefix: 'icon-'
+          }
         }
+      }
+    },
+    px_to_rem: {
+      dist: {
+        options: {
+          base: 16,
+          fallback: false,
+          fallback_existing_rem: false,
+          ignore: [],
+          map: false
+        },
+        files: {
+          'build/css/main.css': ['source/css/main.css']
+        }
+      }
+    }
 
   }); //initConfig
 
@@ -109,7 +133,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-sync');
   grunt.loadNpmTasks('grunt-webfont');
+  grunt.loadNpmTasks('grunt-px-to-rem');
+  grunt.loadNpmTasks('grunt-autoprefixer');
 
-  grunt.registerTask('default', ['newer:imagemin', 'newer:sass', 'sync', 'connect', 'watch']);
+  grunt.registerTask('default', ['newer:imagemin', 'newer:sass', 'newer:px_to_rem', 'sync', 'connect', 'watch']);
 
 };
