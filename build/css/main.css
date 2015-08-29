@@ -857,10 +857,6 @@ aside[id='slidr-div-breadcrumbs'] .slidr-breadcrumbs li.active {
 
 .gallery__filter {
   display: none; }
-  .gallery__filter:checked + .gallery__filterlabel {
-    -webkit-animation: shake 150ms 3 linear;
-            animation: shake 150ms 3 linear;
-    border: 0.0625rem solid #ffde00; }
 
 .gallery__filterlabel {
   font-family: "Raleway", sans-serif;

@@ -829,9 +829,6 @@ aside[id='slidr-div-breadcrumbs'] .slidr-breadcrumbs li.active {
 
 .gallery__filter {
   display: none; }
-  .gallery__filter:checked + .gallery__filterlabel {
-    animation: shake 150ms 3 linear;
-    border: 1px solid #ffde00; }
 
 .gallery__filterlabel {
   font-family: "Raleway", sans-serif;
