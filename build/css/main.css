@@ -857,6 +857,8 @@ aside[id='slidr-div-breadcrumbs'] .slidr-breadcrumbs li.active {
 
 .gallery__filter {
   display: none; }
+  .gallery__filter:checked + .gallery__filterlabel {
+    border: 0.0625rem solid #ffde00; }
 
 .gallery__filterlabel {
   font-family: "Raleway", sans-serif;

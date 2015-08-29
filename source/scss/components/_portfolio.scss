@@ -43,9 +43,10 @@
 
 .gallery__filter {
   display: none;
-  // &:checked + .gallery__filterlabel {
-    // animation: shake 150ms 3 linear; //пока убрал (в IE11 смотрится ужасно)
-  // }
+  &:checked + .gallery__filterlabel {
+    // animation: shake 150ms 3 linear пока убрал (в IE11 смотрится ужасно)
+    border: 1px solid $basic-yellow;
+  }
 }
 
 .gallery__filterlabel {
