@@ -1,6 +1,8 @@
-/* Basic  Styles*/
+/*====================================
+=            Basic Styles            =
+====================================*/
 
-//сброс стилей для кнопок форм
+  //сброс стилей для кнопок форм
 [role="button"], input[type="submit"], input[type="reset"], input[type="button"], button {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
@@ -30,16 +32,25 @@ body {
   font-family: $basic-font;
   -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    min-width: 1366px;
 }
 //center wrappers
+
 .wrapper-wide {
-  max-width: 1170px;
+  max-width: 1172px;
   margin: 0 auto;
+  @include scut-clearfix;
 }
 
 .wrapper-narrow {
   max-width: 1030px;
   margin: 0 auto;
+  @include scut-clearfix;
+}
+.wrapper-tiny {
+  max-width: 968px;
+  margin: 0 auto;
+  @include scut-clearfix;
 }
 
 a {
@@ -64,5 +75,21 @@ a {
   line-height: 1;
   color: $color-basic-text;
   font-size: 17px;
-  line-height: percentage(26/17);
+  line-height:(26/17);
 }
+
+//анимация для иконок [benefit__icon.icon-...] и portfolio__filterlabel
+  @keyframes shake {
+      0% {
+        transform: translate(3px, 0);
+      }
+      50% {
+        transform: translate(-3px, 0);
+      }
+      100% {
+        transform: translate(0, 0);
+      }
+    }
+
+/*=====  End of Basic Styles  ======*/
+

@@ -16,3 +16,27 @@
   background-repeat: no-repeat;
   background-position: $left $top;
 }
+
+//gallery checked input mixin
+@mixin gallery-magic($modificator) {
+  input#select-#{$modificator}:checked {
+    & ~ .gallery .gallery__item:not(.gallery__item--#{$modificator}) {
+      cursor: default;//for IE9,10
+      pointer-events: none;
+      & .figure {
+        background: darken($basic-yellow, 30%) url('../images/bg-none.gif') left bottom;
+        &:hover>.figure__caption {
+          bottom: -100%;
+        }
+      }
+    }
+  }
+}
+
+//cross-browser placeholder mixin
+@mixin placeholder {
+  &::-webkit-input-placeholder {@content}
+  &:-moz-placeholder           {@content}
+  &::-moz-placeholder          {@content}
+  &:-ms-input-placeholder      {@content}
+}

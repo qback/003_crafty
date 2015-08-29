@@ -24,6 +24,11 @@
   word-wrap: break-word;
   color: white;
 }
+//обертка для текста слайдера
+//все, что больше обертки по высоте обрезается с помощью плагина dotdotdot
+.article__wrapper {
+  max-height: 150px;
+}
 
 .article__text {
   font-size: 15px;
@@ -33,7 +38,7 @@
   position: relative;
   overflow: hidden;
   max-width: 800px;
-  max-height: 75px;
+  
   margin-bottom: 73px;
   color: $article-text;
 }

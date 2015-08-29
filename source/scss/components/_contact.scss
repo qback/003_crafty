@@ -1,0 +1,35 @@
+/*==============================================
+=            Contact block styles            =
+==============================================*/
+
+.contact {
+  background: $bg-dirty-white2;
+}
+
+.contact__header {
+  padding: 130px 0 73px;
+  text-align: center;
+}
+
+.contact__img {
+  font-size: 70px;
+  color: $basic-yellow;
+}
+
+.contact__title {
+  margin: 31px 0 22px;
+  word-spacing: 0;
+  @extend %basic-title-style;
+}
+
+.contact__subhead {
+  @extend %basic-subhead-style;
+}
+
+.contact__form {
+  padding: 117px 0 127px;
+}
+
+@import '_contact-form';
+
+/*=====  End of Contact block styles  ======*/

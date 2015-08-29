@@ -1,0 +1,188 @@
+/*==============================================
+=            Portfolio block styles            =
+==============================================*/
+
+.portfolio {
+  background: $bg-dirty-white2;
+}
+
+.portfolio__header {
+  padding: 57px 0 122px;
+  text-align: center;
+  background: $bg-portfolio-dark;
+}
+
+.portfolio__img {
+  font-size: 67px;
+  color: $basic-yellow;
+}
+
+.portfolio__title {
+  margin: 22px 0;
+  word-spacing: 0;
+  @extend %basic-title-style;
+}
+
+.portfolio__subhead {
+  @extend %basic-subhead-style;
+}
+
+.portfolio__body {
+  padding-top: 82px;
+}
+
+.gallery {
+  width: 100%;
+  height: 472px;
+  margin-top: 83px;
+  padding: 0;
+  list-style-type: none;
+  background: $bg-gallery;
+  @include scut-clearfix;
+}
+
+.gallery__filter {
+  display: none;
+  &:checked + .gallery__filterlabel {
+    animation: shake 150ms 3 linear; //настройка анимации в base.scss
+    border: 1px solid $basic-yellow;
+  }
+}
+
+.gallery__filterlabel {
+  font-family: $additional-font;
+  font-size: 18px;
+  font-weight: 300;
+  padding: 5px 13px;
+  cursor: pointer;
+  color: $color-portfolio-text;
+  border: 1px solid transparent;
+  &:first-of-type {
+    margin-left: 18.3%;
+  }
+}
+
+.gallery__item {
+  float: left;
+  margin: 0;
+  &:first-child {
+    width: 50%;
+    height: 236px;
+  }
+  &:nth-child(2) {
+    width: 25%;
+    height: 236px;
+  }
+  &:nth-child(3) {
+    float: right;
+    width: 25%;
+    height: 472px;
+  }
+  &:nth-child(4) {
+    width: 25%;
+    height: 236px;
+  }
+  &:nth-child(5) {
+    width: 25%;
+    height: 236px;
+  }
+  &:nth-child(6) {
+    width: 25%;
+    height: 236px;
+  }
+}
+
+.figure {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  transition: background .3s;
+  background-position: center;
+  background-size: cover;
+  &:hover > .figure__caption {
+    bottom: 0;
+  }
+  &--branding {
+    background-image: url('https://stockphotos.io/wp-content/uploads/2013/04/1368559809b21e5-600x406.jpg');
+  }
+  &--web {
+    background-image: url('https://stockphotos.io/wp-content/uploads/2013/04/1368560361ecd3b-600x389.jpg');
+  }
+  &--photography {
+    background-image: url('https://snap-photos.s3.amazonaws.com/img-thumbs/960w/W7RWLHPKX4.jpg');
+  }
+  &--ui {
+    background-image: url('https://stockphotos.io/wp-content/uploads/2013/04/1436228335ae54d.jpg');
+  }
+  &--development {
+    background-image: url('http://images.freeimages.com/images/previews/1a1/one-man-one-team-1236724.jpg');
+  }
+  &--web1 {
+    background-image: url('https://stockphotos.io/wp-content/uploads/2013/04/1367972480dc51b-600x450.jpg');
+  }
+}
+
+.figure__caption {
+  position: absolute;
+  bottom: -100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 45px 26px 26px 36px;
+  transition: bottom .2s;
+  background: rgba($basic-yellow, .85);
+}
+
+.figure__title {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: percentage(26/17);
+  margin: 0;
+  text-transform: uppercase;
+  color: $color-figure-title;
+}
+
+.figure__desc {
+  font-size: 16px;
+  color: $color-basic-text;
+}
+
+.figure__plus {
+  font: 0/0 a;
+  position: relative;
+  display: block;
+  width: 32px;
+  height: 32px;
+  transform: rotate(90deg);
+  color: transparent;
+  text-shadow: none;
+  &:before, &:after {
+    position: absolute;
+    z-index: -1;
+    content: '';
+    background: black;
+  }
+  &:before {
+    left: 50%;
+    width: percentage(1/32);
+    height: 100%;
+    margin-left: percentage(.5/32)*-1;
+  }
+  &:after {
+    top: 50%;
+    width: 100%;
+    height: percentage(1/32);
+    margin-top: percentage(.5/32)*-1;
+  }
+}
+
+@include gallery-magic(branding);
+@include gallery-magic(web);
+@include gallery-magic(photography);
+@include gallery-magic(ui);
+@include gallery-magic(development);
+
+/*=====  End of Portfolio block styles  ======*/

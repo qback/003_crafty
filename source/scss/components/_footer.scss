@@ -1,0 +1,32 @@
+/*==========================================
+=            Main-Footer styles            =
+==========================================*/
+
+.main-footer {
+  padding: 72px;
+  @include scut-clearfix;
+  background: $bg-footer-grey;
+}
+
+.main-footer__copyright {
+  float: left;
+}
+
+.main-footer__social {
+  float: right;
+}
+
+.copyright {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: (25/20);
+  letter-spacing: .24em;
+  span {
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+}
+
+@import "_social-block";
+
+/*=====  End of Main-Footer styles  ======*/

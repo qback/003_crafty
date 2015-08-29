@@ -1,0 +1,62 @@
+/*----------  Contact Form styles  ----------*/
+
+.request-form {
+  text-align: justify;
+}
+
+.request-form__name, .request-form__email, .request-form__theme, .request-form__message {
+  font-size: 20px;
+  display: inline-block;
+  box-sizing: border-box;
+  width: percentage(370/1172);
+  margin-bottom: 39px;
+  padding: 0 18px;
+  vertical-align: top;
+  letter-spacing: 0.24em;
+  border: 1px solid $border-input-grey;
+  background: $bg-dirty-white2;
+  // letter-spacing: 0.275em;
+  @include placeholder {
+    font-size: 20px;
+    text-transform: uppercase;
+    text-overflow: ellipsis;
+    color: rgba($color-input-grey, .5);
+  }
+  &:focus {
+    outline: 1px solid $basic-yellow;
+  }
+}
+
+.request-form__name, .request-form__email, .request-form__theme {
+  line-height: (70/20);
+  height: 70px;
+}
+
+.request-form__message {
+  overflow: hidden;
+  width: 100%;
+  max-height: 205px;
+  margin-bottom: 34px;
+  padding: 22px 18px;
+}
+
+input.request-form__submit {
+  font-size: 16px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: (72/20);
+  display: block;
+  width: percentage(370/1172);
+  height: 72px;
+  margin: 0 auto;
+  transition: all .2s;
+  text-align: center;
+  letter-spacing: .24em;
+  text-transform: uppercase;
+  color: $color-input-grey;
+  background: $basic-yellow;
+  &:hover {
+    color: lighten($color-input-grey, 55%);
+    background: darken($basic-yellow, 15%);
+  }
+}

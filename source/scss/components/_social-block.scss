@@ -1,0 +1,52 @@
+/*----------  Social-block styles  ----------*/
+
+.social-block {
+  margin: 0;
+  padding: 0 2px 0 0;
+  height: 56px;
+  @include scut-clearfix;
+}
+
+.social-block__link {
+  float: left;
+  width: 56px;
+  height: 56px;
+  margin-left: 14px;
+  //скрываем текст иконки
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  text-align: center;
+  position: relative;
+  &--fb {
+    background: $bg-fb-icon;
+    i {
+      top: 12px;
+      left: 19px;
+    }
+  }
+  &--dribble {
+    background: $bg-dribble-icon;
+    i {
+      top: 11px;
+      left: 9px;
+    }
+  }
+  &--behance {
+    background: $bg-behance-icon;
+    i {
+      top: 18px;
+      left: 14px;
+    }
+  }
+  i {
+    font-size: 33px;
+    color: white;
+    line-height: 1;
+    position: absolute;
+    transition: color 0.2s;
+  }
+  &:hover i {
+    color: $basic-yellow;
+  }
+}

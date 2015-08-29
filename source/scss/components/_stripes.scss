@@ -1,0 +1,239 @@
+/*============================================
+=            Stripes decor styles            =
+============================================*/
+
+
+/*----------  Contact block stripes  ----------*/
+
+.stripeswrapper {
+  height: 100%;
+}
+
+.contact__header {
+  position: relative;
+  overflow: hidden;
+}
+
+.contact__header:before {
+  position: absolute;
+  bottom: -250px;
+  left: -1446px;
+  width: 200%;
+  height: 300px;
+  content: '';
+  transform: skewY(4deg);
+  background: $color-basic-text;
+}
+
+.contact__header:after {
+  position: absolute;
+  bottom: -268px;
+  left: -1531px;
+  width: 200%;
+  height: 300px;
+  content: '';
+  transform: skewY(2.5deg);
+  background: $bg-dirty-white2;
+}
+
+.stripeswrapper--contact:before {
+  position: absolute;
+  right: -1446px;
+  bottom: -244px;
+  width: 200%;
+  height: 300px;
+  content: '';
+  transform: skewY(-10.5deg);
+  background: $basic-yellow;
+}
+
+.stripeswrapper--contact:after {
+  position: absolute;
+  right: -1446px;
+  bottom: -260px;
+  width: 200%;
+  height: 300px;
+  content: '';
+  transform: skewY(-7.65deg);
+  background: $bg-dirty-white2;
+}
+
+.contact {
+  position: relative;
+  overflow: hidden;
+}
+
+.contact:before {
+  position: absolute;
+  top: -266px;
+  right: -1864px;
+  width: 200%;
+  height: 300px;
+  content: '';
+  transform: skewY(3.2deg);
+  background: $bg-stripe;
+}
+
+
+/*----------  Portfolio block stripes  ----------*/
+
+.portfolio__header {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio__header:before {
+  position: absolute;
+  bottom: -250px;
+  left: -1446px;
+  width: 200%;
+  height: 300px;
+  content: '';
+  transform: skewY(4deg);
+  background: $bg-dirty-white2;
+}
+
+.portfolio__header:after {
+  position: absolute;
+  right: -1446px;
+  bottom: -272px;
+  width: 200%;
+  height: 300px;
+  content: '';
+  transform: skewY(-5.8deg);
+  background: $basic-yellow;
+}
+
+.stripeswrapper--portfolio:before {
+  position: absolute;
+  z-index: 10;
+  right: -1446px;
+  bottom: -283px;
+  width: 200%;
+  height: 300px;
+  content: '';
+  transform: skewY(-2.8deg);
+  background: white;
+}
+
+.stripeswrapper--portfolio:before {
+  position: absolute;
+  z-index: 10;
+  right: -1446px;
+  bottom: -283px;
+  width: 200%;
+  height: 300px;
+  content: '';
+  transform: skewY(-2.8deg);
+  background: $bg-dirty-white2;
+}
+
+.stripeswrapper--portfolio:after {
+  position: absolute;
+  top: -189px;
+  left: -1864px;
+  width: 200%;
+  height: 300px;
+  content: '';
+  transform: skewY(-6.6deg);
+  background: #ffde00;
+}
+
+.portfolio {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio:before {
+  position: absolute;
+  z-index: 5;
+  top: -268px;
+  left: -1864px;
+  width: 200%;
+  height: 300px;
+  content: '';
+  transform: skewY(-1.2deg);
+  background: $bg-light-grey;
+}
+
+.portfolio:after {
+  position: absolute;
+  z-index: 4;
+  top: -220px;
+  left: -1864px;
+  width: 200%;
+  height: 300px;
+  content: '';
+  transform: skewY(-4.6deg);
+  background: $bg-light-grey;
+}
+
+
+/*----------  Main-Header stripes styles  ----------*/
+
+.main-header {
+  position: relative;
+  overflow: hidden;
+}
+
+.main-header:before {
+  position: absolute;
+  right: -1361px;
+  bottom: -278px;
+  width: 200%;
+  height: 300px;
+  content: '';
+  transform: skewY(-3.8deg);
+  background: $basic-yellow;
+  z-index: 15;
+}
+
+.main-header:after {
+  position: absolute;
+  left: -1361px;
+  bottom: -269px;
+  width: 200%;
+  height: 300px;
+  content: '';
+  transform: skewY(3deg);
+  background: $basic-yellow;
+}
+
+.stripeswrapper--header:before {
+  position: absolute;
+  left: -1361px;
+  bottom: -274px;
+  width: 200%;
+  height: 300px;
+  content: '';
+  transform: skewY(2.7deg);
+  background: $bg-stripe2;
+  z-index: 6;
+}
+
+.stripeswrapper--header:after {
+  position: absolute;
+  left: -1361px;
+  bottom: -288px;
+  width: 200%;
+  height: 300px;
+  content: '';
+  transform: skewY(1deg);
+  background: white;
+  z-index: 7;
+}
+
+.stripeswrapper--header-2:before {
+  position: absolute;
+  left: -1361px;
+  bottom: -292px;
+  width: 200%;
+  height: 300px;
+  content: '';
+  transform: skewY(0.6deg);
+  background: $bg-dirty-white;
+  z-index: 8;
+}
+
+
+/*=====  End of Stripes decor styles  ======*/

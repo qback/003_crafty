@@ -69,7 +69,7 @@ module.exports = function(grunt) {
       },
       scss: {
         files: ['source/scss/**/*.scss'],
-        tasks: ['sass', 'px_to_rem', 'autoprefixer', 'sync']
+        tasks: ['sass',  'autoprefixer', 'px_to_rem', 'sync']
       },
       copyJs: {
         files: ['source/js/*.js'],
@@ -118,7 +118,7 @@ module.exports = function(grunt) {
           map: false
         },
         files: {
-          'build/css/main.css': ['source/css/main.css']
+          'build/css/main.css': ['build/css/main.css']
         }
       }
     }

@@ -1,3 +1,6 @@
+/*----------  Benefits block styles  ----------*/
+
+
 .benefit {
   float: left;
   width: percentage(416/1030);
@@ -15,7 +18,7 @@
     background-color: $basic-yellow
   }
   & .benefit__icon {
-    animation: shake 150ms 3 linear;
+    animation: shake 150ms 3 linear; //настройка анимации в base.scss
   }
 }
 .benefit__img {
@@ -26,7 +29,7 @@
   border: 1px solid black;
   position: relative;
   text-align: center;
-  transition: background-color 0.2s;
+  transition: background-color 0.2s; 
 }
 .benefit__icon {
     position: absolute;
@@ -52,18 +55,7 @@
       top: 31px;
     }
   }
-  //анимация для иконок [benefit__icon.icon-...]
-  @keyframes shake {
-      0% {
-        transform: translate(3px, 0);
-      }
-      50% {
-        transform: translate(-3px, 0);
-      }
-      100% {
-        transform: translate(0, 0);
-      }
-    }
+  
 
 .benefit__text {
   float:right;
@@ -77,11 +69,11 @@
   line-height: 1;
   text-transform: uppercase;
   font-weight: 800;
-  color: $color-benefit-title-dark;
+  color: $color-benefit-dark;
   transition: color 0.2s;
 }
 .benefit__desc {
-  color:$color-benefit-desc-dark;
+  color:$color-benefit-dark;
   font-size: 14px;
   line-height: percentage(26/14);
   font-weight: 300;
