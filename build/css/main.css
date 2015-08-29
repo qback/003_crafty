@@ -680,7 +680,7 @@ a {
 
 .article__link {
   font-size: 0.9375rem;
-  line-height: 313.333333333%;
+  line-height: 3.1333333333;
   padding: 0.9375rem 2.4375rem;
   -webkit-transition: all 0.1s linear;
           transition: all 0.1s linear;
@@ -816,7 +816,7 @@ aside[id='slidr-div-breadcrumbs'] .slidr-breadcrumbs li.active {
 .benefit__desc {
   color: #343434;
   font-size: 0.875rem;
-  line-height: 185.714285714%;
+  line-height: 1.8571428571;
   font-weight: 300;
   margin-top: 0.625rem; }
 

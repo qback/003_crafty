@@ -75,7 +75,7 @@
 .benefit__desc {
   color:$color-benefit-dark;
   font-size: 14px;
-  line-height: percentage(26/14);
+  line-height: (26/14);
   font-weight: 300;
   margin-top: 10px;
 }
