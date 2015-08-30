@@ -1,6 +1,8 @@
 $(document).ready(function() {
   //плагин для обрезки длинного текста в блоке
-  $(".figure__caption, .article__wrapper").dotdotdot();
+  $(".figure__caption, .article__wrapper").dotdotdot({
+    height: 200
+  });
 
   //полифилл для placeholder в IE9
   $('input, textarea').inputPlaceholderPolyfill();
