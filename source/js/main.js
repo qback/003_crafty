@@ -47,29 +47,13 @@
 })(window, document);
 
 
-//скрипт для главного слайдера
-//сторонний плагин slidr.js
-//!!! в IE11 глюк с кнопками переключения слайдера(не работают), баг самого слайдера !!!
-(function(window, document, undefined) {
-  slidr.create('slidr-div', {
-    breadcrumbs: true,
-    controls: 'none',
-    direction: 'horizontal',
-    fade: true,
-    keyboard: true,
-    touch: true,
-    overflow: true,
-    pause: true,
-    timing: {
-      'linear': '0.5s ease-in'
-    },
-    touch: true,
-    transition: 'linear'
-  }).add('h', ['one', 'two', 'three', 'one']).auto(5000);
-})(window, document);
-
-
 $(document).ready(function() {
+  //плагин для обрезки длинного текста в блоке
+  $(".figure__caption, .article__wrapper").dotdotdot();
+
+  //полифилл для placeholder в IE9
+  $('input, textarea').inputPlaceholderPolyfill();
+
   //добавляем св-во hasAttr в библиотеку Jquery
   $.fn.hasAttr = function(name) {
     return this.attr(name) !== undefined;
@@ -98,10 +82,29 @@ $(document).ready(function() {
     }
 
   })
-  //плагин для обрезки длинного текста в блоке
-  $(".figure__caption, .article__wrapper").dotdotdot();
-
-  //полифилл для placeholder в IE9
-  $('input, textarea').inputPlaceholderPolyfill();
+  
 
 });
+
+//скрипт для главного слайдера
+//сторонний плагин slidr.js
+//!!! в IE11 глюк с кнопками переключения слайдера(не работают), баг самого слайдера !!!
+(function(window, document, undefined) {
+  slidr.create('slidr-div', {
+    breadcrumbs: true,
+    controls: 'none',
+    direction: 'horizontal',
+    fade: true,
+    keyboard: true,
+    touch: true,
+    overflow: true,
+    pause: true,
+    timing: {
+      'linear': '0.5s ease-in'
+    },
+    touch: true,
+    transition: 'linear'
+  }).add('h', ['one', 'two', 'three', 'one']).auto(5000);
+})(window, document);
+
+
