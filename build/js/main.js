@@ -1,9 +1,11 @@
 $(document).ready(function() {
   //плагин для обрезки длинного текста в блоке
-  $(".figure__caption, .article__wrapper").dotdotdot({
+  $(".article__wrapper").dotdotdot({
     height: 200
   });
-
+  $(".figure__caption").dotdotdot({
+    height: 150
+  });
   //полифилл для placeholder в IE9
   $('input, textarea').inputPlaceholderPolyfill();
 
@@ -37,9 +39,6 @@ $(document).ready(function() {
   })
 });
 
-$(window).load(function() {
-   $(".article__wrapper").trigger( "update.dot" );
-});
 
 //скрипт для навигационного меню
 
@@ -112,5 +111,3 @@ $(window).load(function() {
     transition: 'linear'
   }).add('h', ['one', 'two', 'three', 'one']).auto(5000);
 })(window, document);
-
-
