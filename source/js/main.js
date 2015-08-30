@@ -1,3 +1,44 @@
+$(document).ready(function() {
+  //плагин для обрезки длинного текста в блоке
+  $(".figure__caption, .article__wrapper").dotdotdot();
+
+  //полифилл для placeholder в IE9
+  $('input, textarea').inputPlaceholderPolyfill();
+
+  //добавляем св-во hasAttr в библиотеку Jquery
+  $.fn.hasAttr = function(name) {
+    return this.attr(name) !== undefined;
+  };
+  //ссылка не работает, если у блока с картинкой есть атрибут disabled
+  $(".gallery__item").on("click", function(event) {
+    if ($(this).hasAttr("disabled")) {
+      return false;
+    }
+  });
+  //переключени атрибута disabled в зависимости от радиокнопки
+  $('.gallery__filter').on('focus', function() {
+    var select = $(this).attr('id');
+    if (select === 'select-all') {
+      $('.gallery__item').removeAttr('disabled');
+    } else {
+      $('.gallery__item').each(function(indx, element) {
+        var $element = $(element);
+        var data = $element.data('item');
+        if (data === select) {
+          $element.removeAttr('disabled');
+        } else {
+          $element.attr('disabled', 'disabled')
+        }
+      })
+    }
+
+  })
+});
+
+$(window).load(function() {
+   $(".article__wrapper").trigger( "update.dot" );
+});
+
 //скрипт для навигационного меню
 
 (function(window, document, undefined) {
@@ -47,44 +88,7 @@
 })(window, document);
 
 
-$(document).ready(function() {
-  //плагин для обрезки длинного текста в блоке
-  $(".figure__caption, .article__wrapper").dotdotdot();
 
-  //полифилл для placeholder в IE9
-  $('input, textarea').inputPlaceholderPolyfill();
-
-  //добавляем св-во hasAttr в библиотеку Jquery
-  $.fn.hasAttr = function(name) {
-    return this.attr(name) !== undefined;
-  };
-  //ссылка не работает, если у блока с картинкой есть атрибут disabled
-  $(".gallery__item").on("click", function(event) {
-    if ($(this).hasAttr("disabled")) {
-      return false;
-    }
-  });
-  //переключени атрибута disabled в зависимости от радиокнопки
-  $('.gallery__filter').on('focus', function() {
-    var select = $(this).attr('id');
-    if (select === 'select-all') {
-      $('.gallery__item').removeAttr('disabled');
-    } else {
-      $('.gallery__item').each(function(indx, element) {
-        var $element = $(element);
-        var data = $element.data('item');
-        if (data === select) {
-          $element.removeAttr('disabled');
-        } else {
-          $element.attr('disabled', 'disabled')
-        }
-      })
-    }
-
-  })
-  
-
-});
 
 //скрипт для главного слайдера
 //сторонний плагин slidr.js
