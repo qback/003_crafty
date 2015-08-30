@@ -7,7 +7,7 @@
 }
 
 .contact__header {
-  padding: 130px 0 73px;
+  padding: 130px 0 74px;
   text-align: center;
 }
 
@@ -17,9 +17,10 @@
 }
 
 .contact__title {
-  margin: 31px 0 22px;
+  margin: 31px 0 22px 13px;
   word-spacing: 0;
   @extend %basic-title-style;
+  text-align: center;
 }
 
 .contact__subhead {

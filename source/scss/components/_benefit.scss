@@ -4,7 +4,7 @@
 .benefit {
   float: left;
   width: percentage(416/1030);
-  margin-bottom: 17px;
+  margin-bottom: 15px;
   @include scut-clearfix;
   &:nth-child(even) {
     float: right;
